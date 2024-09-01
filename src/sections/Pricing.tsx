@@ -3,7 +3,7 @@ import CheckIcon from '@/assets/check.svg'
 
 export const Pricing = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-white">
       <div className="container">
         <div className='section-heading'>
           <h2 className="section-title">Pricing</h2>
@@ -14,7 +14,7 @@ export const Pricing = () => {
         <div className='flex flex-col lg:flex-row lg:items-end lg:justify-center gap-6 items-center mt-10'>
           {
             pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }, index) => (
-              <div key={index} className={clsx('p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full ', inverse && 'border-black bg-black text-white')}>
+              <div key={index} className={clsx('card', inverse && 'border-black bg-black text-white')}>
                 <div className='flex justify-between'>
                   <h3 className={clsx('text-lg font-bold text-black/50', inverse && 'text-white/70')}>{title}</h3>
                   {
