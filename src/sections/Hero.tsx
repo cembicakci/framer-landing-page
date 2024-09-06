@@ -1,15 +1,13 @@
 "use client"
 
 import { useRef } from 'react';
-import Image from 'next/image';
 
 import ArrowIcon from '@/assets/arrow-right.svg'
 import cogImage from '@/assets/cog.png'
 import cylinderImage from '@/assets/cylinder.png'
 import noodleImage from '@/assets/noodle.png'
 
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
-
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export const Hero = () => {
 
@@ -27,7 +25,6 @@ export const Hero = () => {
       <div className="container">
 
         <div className='md:flex items-center'>
-
           <div className='md:w-[478px]'>
             <div className="tag">
               Version 2.0 is here

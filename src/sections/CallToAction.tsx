@@ -1,7 +1,5 @@
 "use client"
 
-import Image from 'next/image';
-
 import ArrowRight from '@/assets/arrow-right.svg'
 import starImage from '@/assets/star.png'
 import springImage from '@/assets/spring.png'

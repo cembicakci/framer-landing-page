@@ -1,11 +1,29 @@
+"use client"
+
 import Image from 'next/image';
 import ArrowRight from '@/assets/arrow-right.svg'
 import MenuIcon from '@/assets/menu.svg'
 import Logo from '@/assets/logosaas.png'
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
+
+  const [navbar, setNavbar] = useState(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 20) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+  }, [])
+
   return (
-    <header className='sticky top-0 backdrop-blur-sm z-20'>
+    <header className={`sticky top-0 z-20 backdrop-blur-sm`}>
       <div className="flex items-center justify-center bg-black text-white py-3 text-sm gap-3">
         <p className='hidden md:block text-white/60'>Streamline your workflow and boost your productivity.</p>
         <div className='gap-1 inline-flex items-center'>
